@@ -1,1 +1,0 @@
-import{w as r}from"./index.cWGSX31V.js";const a={age:5,apiKey:""},e=r(a);{const t=localStorage.getItem("user_setting");t!==null&&e.set(JSON.parse(t)),e.subscribe(s=>{localStorage.setItem("user_setting",JSON.stringify(s))})}export{e as s};
