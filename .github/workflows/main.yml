@@ -22,7 +22,7 @@ jobs:
         run: npm i
 
       - name: setup panda css
-        run: npm panda codegen
+        run: npm run prepare
       
       # ビルド実行、静的リソースを作る
       - name: build static resources
