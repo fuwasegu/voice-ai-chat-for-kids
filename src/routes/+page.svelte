@@ -7,7 +7,7 @@ import type { Message } from '$lib/types';
 import { postMessage } from '$lib/chat';
 import { record, type Transcript } from '$lib/recognition';
 import AnimationRobot from '$lib/components/AnimationRobot.svelte';
-  import { speak } from '$lib/speech';
+  import { dummy, speak } from '$lib/speech';
   import { getPrompt } from '$lib/prompts';
   import { MessageQueue, type ReplySet } from '$lib/queue';
 
@@ -69,11 +69,10 @@ const speakText = async (text: string) => {
 }
 
 const click = async () => {
+    dummy();
     try {
         const recordingResult = await recordVoice();
-        alert(recordingResult.value);
         const generatedResponse = await generateResponse(recordingResult.value);
-        alert(generatedResponse.content);
         await speakText(generatedResponse.content);
     } catch (e) {
         recording = false;
