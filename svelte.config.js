@@ -15,7 +15,7 @@ const config = {
 		},
 		typescript: {
 			config: (config) => {
-				config.include.push("../styled-system");
+				config.include.push("./styled-system");
 				return config;
 			}
 		},
