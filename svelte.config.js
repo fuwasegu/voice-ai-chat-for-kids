@@ -8,7 +8,9 @@ const config = {
 	kit: {
 		adapter: adapter({
 			fallback: '404.html',
-			strict: true
+			strict: true,
+			pages: 'build',
+			assets: 'build'
 		}),
 		alias: {
 			'styled-system': './styled-system/*'
@@ -18,7 +20,7 @@ const config = {
 				config.include.push("../styled-system");
 				return config;
 			}
-		}
+		},
 	}
 };
 
