@@ -20,6 +20,9 @@ jobs:
       # package.jsonの内容でパッケージインストール
       - name: setup app env
         run: npm i
+
+      - name: setup panda css
+        run: npm panda codegen
       
       # ビルド実行、静的リソースを作る
       - name: build static resources
