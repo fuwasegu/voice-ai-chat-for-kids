@@ -18,6 +18,9 @@ const config = {
 				config.include.push("./styled-system");
 				return config;
 			}
+		},
+		paths: {
+			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
 		}
 	}
 };
