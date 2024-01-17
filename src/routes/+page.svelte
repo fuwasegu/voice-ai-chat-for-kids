@@ -71,7 +71,9 @@ const speakText = async (text: string) => {
 const click = async () => {
     try {
         const recordingResult = await recordVoice();
+        alert(recordingResult.value);
         const generatedResponse = await generateResponse(recordingResult.value);
+        alert(generatedResponse.content);
         await speakText(generatedResponse.content);
     } catch (e) {
         recording = false;
