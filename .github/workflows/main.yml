@@ -35,4 +35,4 @@ jobs:
           github_token: ${{ secrets.GH_API_TOKEN }}
           # アプリ直下のbuildディレクトリに生成されるため、指定
           publish_dir: build
-          # cname: chat-kids.fuwasegu.com
+          name: chat-kids.fuwasegu.com
