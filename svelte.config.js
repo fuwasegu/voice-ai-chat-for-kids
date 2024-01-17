@@ -7,7 +7,8 @@ const config = {
 
 	kit: {
 		adapter: adapter({
-			fallback: 'index.html',
+			fallback: '404.html',
+			strict: true
 		}),
 		alias: {
 			'styled-system': './styled-system/*'
@@ -17,6 +18,9 @@ const config = {
 				config.include.push("../styled-system");
 				return config;
 			}
+		},
+		paths: {
+			base: process.argv.includes('dev') ? '' : process.env.BASE_PATH
 		}
 	}
 };

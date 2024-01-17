@@ -3,8 +3,6 @@ import { center, container } from 'styled-system/patterns';
 import '../app.css'
 import { css } from 'styled-system/css';
 import SettingButton from '$lib/components/SettingButton.svelte';
-
-export const prerender = true;
 </script>
 
 <div class={css({
